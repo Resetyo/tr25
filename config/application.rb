@@ -6,13 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-use Rack::Cors do
-  allow do
-    origins '*'
-    resource '*', headers: :any, methods: :any
-  end  
-end
-
 module Tr25
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -31,5 +24,12 @@ module Tr25
     config.active_record.raise_in_transactional_callbacks = true
 
     config.encoding = "utf-8"
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => :any
+      end
+    end
   end
 end
