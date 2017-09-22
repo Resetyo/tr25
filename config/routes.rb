@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   match '/new_or_update_gallery', to: 'galleries#new_or_update_gallery', via: 'get'
   match '/sort', to: 'galleries#sort', via: 'get'
 
+  match '/counter', to: 'test#counter', via: 'post'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
