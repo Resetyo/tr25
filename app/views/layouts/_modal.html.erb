@@ -1,0 +1,24 @@
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Редактирование</h4>
+      </div>
+      <%= form_for(field) do |f| %>
+        <div class="modal-body">
+          <p>Русский</p>
+          <%= f.text_area :ru, class: "form-control", rows: 5 %>
+          </br>
+          <p>English</p>
+          <%= f.text_area :en, class: "form-control", rows: 5 %>
+        </div>
+        <div class="modal-footer">
+          <%= link_to "Следующий элемент", edit_field_path(field.id+1), class: "btn btn-default", remote: true %>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+          <%= submit_tag "Сохранить", class: "btn btn-default" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

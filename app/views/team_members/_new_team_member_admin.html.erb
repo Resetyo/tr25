@@ -1,0 +1,14 @@
+<div class="col-sm-4">
+  
+  <!-- Team member -->
+  <div class="team__member">
+    <%= link_to new_team_member_path, remote: true do %>
+      <div class="team-member__avatar">
+        <%= image_tag "/img/photo_new.jpg", class: "img-responsive" %>
+      </div>
+      <h4 class="team-member__name">
+        Add team member
+      </h4>
+    <% end %>
+  </div> <!-- / .team__member -->
+</div>

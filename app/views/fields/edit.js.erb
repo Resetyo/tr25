@@ -1,0 +1,4 @@
+$(".modal").modal('hide');
+$(".modal").remove();
+$("body").prepend('<%= j render "layouts/modal", field: @field, locale: @locale %>');
+$(".modal").modal();

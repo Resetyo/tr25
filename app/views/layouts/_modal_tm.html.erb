@@ -1,0 +1,40 @@
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Редактирование</h4>
+      </div>
+      <%= form_for @team_member do |f| %>
+        <%#= f.hidden_field 'locale' %>
+      <div class="modal-body">
+        <p>Фото</p>
+        <%= f.file_field :photo, class: "form-control" %>
+        <p>Имя</p>
+        <p>English</p>
+        <%= f.text_field :name, class: "form-control" %>
+        </br>
+        <p>Русский</p>
+        <%= f.text_field :ru_name, class: "form-control" %>
+        <p>Инфо</p>
+        <p>English</p>
+        <%= f.text_field :info, class: "form-control" %>
+        </br>
+        <p>Русский</p>
+        <%= f.text_field :ru_info, class: "form-control" %>
+        <p>Facebook</p>
+        <%= f.text_field :fb, class: "form-control" %>
+        <p>Vkontakte</p>
+        <%= f.text_field :vk, class: "form-control" %>
+      </div>
+      <div class="modal-footer">
+        <% if !@team_member.new_record? %>
+          <%= link_to "Удалить", team_member_path(@team_member), method: :delete %>
+        <% end %>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+        <%= f.submit "Сохранить", class: "btn btn-default" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

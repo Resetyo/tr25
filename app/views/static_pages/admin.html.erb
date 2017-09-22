@@ -1,0 +1,817 @@
+<!-- NAVBAR ============================== -->
+<div class="navbar navbar-default navbar__initial navbar-fixed-top scrollspy_menu" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Button trigger modal -->
+
+
+      <%= link_to lang(1), edit_field_path(1), class: "navbar-brand", remote: true %>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="fullpage__nav nav navbar-nav navbar-right">
+        <li><%= link_to lang(2), edit_field_path(2), remote: true %></li>
+        <li><%= link_to lang(3), edit_field_path(3), remote: true %></li>
+        <li><%= link_to lang(4), edit_field_path(4), remote: true %></li>
+        <li><%= link_to lang(5), edit_field_path(5), remote: true %></li>
+        <li><%= link_to lang(6), edit_field_path(6), remote: true %></li>
+        <li><%= link_to lang(7), edit_field_path(7), remote: true %></li>
+        <li><%= link_to lang(8), edit_field_path(8), remote: true %></li>
+        <li>
+        <%= link_to change_locale_path do %>
+          <i class="fa fa-globe"></i> en/ru</a>
+        <% end %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+      <% if current_user %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= current_user.email %> 
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+              <li>
+                <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+              </li>
+            <!-- <li><%#= link_to "Все фирмы", root_url(subdomain: false) %></li> -->
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+      <% end %>
+        <li><%= link_to "Back to site", root_path %></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<!-- WELCOME ============================ -->
+<div class="welcome_classic" id="welcome">
+  <div class="welcome-classic__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+             
+          <!-- Pre heading -->
+          <p class="heading__pre">
+            <%= link_to lang(9), edit_field_path(9), remote: true %>
+          </p>
+
+          <!-- Heading -->
+          <h1 class="heading heading_lg">
+            <%= link_to lang(10), edit_field_path(10), remote: true %>
+            <span class="text-primary">
+              <%= link_to lang(11), edit_field_path(11), remote: true %>
+            </span>
+          </h1>
+
+          <!-- Sub heading -->
+          <p class="heading__sub">
+            <%= link_to lang(12), edit_field_path(12), remote: true %>
+          </p>
+
+          <!-- Button -->
+          <div class="text-center">
+          <%= link_to edit_field_path(13), class: "btn btn-xl btn-primary",
+                                           remote: true do %>
+            <span class="oi oi-arrow-right" title="Find out more" aria-hidden="true"></span>
+            <span><%= lang(13) %></span>
+          <% end %>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+    <div>
+    <%= form_for @bground1 do |f| %>
+      <%= f.file_field :image %>
+      <%= f.hidden_field :id %>
+      <button class="btn btn-default">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        Background
+      </button>
+    <% end %>
+
+    </div>
+  </div> <!-- / .classic-welcome__inner -->
+</div> <!-- / .welcome_classic -->
+
+<!-- ABOUT ============================== -->
+<div class="site-wrapper" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+          <div class="lead text-center text">
+            <em>
+              <%= link_to lang(14), edit_field_path(14), remote: true %>
+            </em>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</div> <!-- / .site-wrapper_classic -->
+
+<div class="site-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <!-- Heading -->
+        <h1 class="heading">
+          <%= link_to lang(15), edit_field_path(15), remote: true %> 
+          <span class="text-primary">
+            <%= link_to lang(16), edit_field_path(16), remote: true %>
+          </span> 
+          <%= link_to lang(17), edit_field_path(17), remote: true %>
+        </h1>
+
+        <!-- Sub heading -->
+        <p class="heading__sub">
+          <%= link_to lang(18), edit_field_path(18), remote: true %>
+        </p>
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #1 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-tablet" title="Fully responsive" aria-hidden="true"></span> 
+            <%= link_to lang(19), edit_field_path(19), remote: true %>
+          </h3>
+          <p class="about-item__content">
+            <%= link_to lang(20), edit_field_path(20), remote: true %>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #2 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-project" title="Built with LESS" aria-hidden="true"></span> 
+            <%= link_to lang(21), edit_field_path(21), remote: true %>
+          </h3>
+          <p class="about-item__content">
+            <%= link_to lang(22), edit_field_path(22), remote: true %>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #3 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-envelope-closed" title="Functional contact form" aria-hidden="true"></span> 
+            <%= link_to lang(23), edit_field_path(23), remote: true %>
+          </h3>
+          <p class="about-item__content">
+            <%= link_to lang(24), edit_field_path(24), remote: true %>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #4 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-menu" title="Two menu types" aria-hidden="true"></span> 
+            <%= link_to lang(25), edit_field_path(25), remote: true %>
+          </h3>
+          <p class="about-item__content">
+            <%= link_to lang(26), edit_field_path(26), remote: true %>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #5 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-layers" title="X layout options" aria-hidden="true"></span> 
+            <%= link_to lang(27), edit_field_path(27), remote: true %>
+          </h3>
+          <p class="about-item__content">
+            <%= link_to lang(28), edit_field_path(28), remote: true %>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #6 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-brush" title="5 color schemes" aria-hidden="true"></span> 
+            <%= link_to lang(29), edit_field_path(29), remote: true %>
+          </h3>
+          <p class="about-item__content">
+            <%= link_to lang(30), edit_field_path(30), remote: true %>
+          </p>
+        </div> <!-- / .about__item -->
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper_classic -->
+
+<!-- PORTFOLIO ========================== -->
+<div class="site-wrapper" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <!-- Heading -->
+        <h1 class="heading">
+          <%= link_to lang(31), edit_field_path(31), remote: true %> 
+          <span class="text-primary">
+            <%= link_to lang(32), edit_field_path(32), remote: true %>
+          </span> 
+          <%= link_to lang(33), edit_field_path(33), remote: true %>
+        </h1>
+
+        <!-- Sub heading -->
+        <p class="">
+          <%= link_to lang(34), edit_field_path(34), remote: true %>
+        </p>
+
+      </div>
+      <div class="col-xs-12">
+        
+        <!-- Portfolio navigation -->
+        <div class="">
+          <%= link_to edit_field_path(35), class: "btn btn-lg btn-default", 
+                                            remote: true do %>
+            <span class="oi oi-random" title="All" aria-hidden="true"></span>
+            <span><%= lang(35) %></span>
+          <% end %>
+          <%= link_to edit_field_path(36), class: "btn btn-lg btn-default", 
+                                            remote: true do %>
+            <span class="oi oi-random" title="Category 1" aria-hidden="true"></span>
+            <span><%= lang(36) %></span>
+          <% end %>
+          <%= link_to edit_field_path(37), class: "btn btn-lg btn-default", 
+                                            remote: true do %>
+            <span class="oi oi-random" title="Category 2" aria-hidden="true"></span>
+            <span><%= lang(37) %></span>
+          <% end %>
+          <%= link_to edit_field_path(38), class: "btn btn-lg btn-default", 
+                                            remote: true do %>
+            <span class="oi oi-random" title="Category 3" aria-hidden="true"></span>
+            <span><%= lang(38) %></span>
+          <% end %>
+          <%= link_to edit_field_path(39), class: "btn btn-lg btn-default", 
+                                            remote: true do %>
+            <span class="oi oi-random" title="Category 4" aria-hidden="true"></span>
+            <span><%= lang(39) %></span>
+          <% end %>
+        </div> <!-- / .portfolio__nav -->
+
+      </div>
+    </div> <!-- / .row -->
+
+    <!-- Portfolio items -->
+    <div class="portfolio__items">
+
+      <div class="row">
+
+        <% @gallery_categories.each do |gc| %>
+          <%= render 'layouts/gallery_category_admin', gc: gc %>
+        <% end %>
+
+        <div class="col-sm-4 col-md-3 filter__item filter_category_1 filter_category_2 filter_category_3">
+          <!-- Portfolio item #8 -->
+          <div class="portfolio__item" style="height: 189px">
+          <%= link_to new_gallery_category_path, remote: true do %>
+          <%#= form_for @gallery_category, remote: true do |f| %>
+            <%#= content_tag :button, type: "submit" do %>
+            <!-- Mask -->
+              <div>+</div>
+              <div class="portfolio-item__mask">
+                <div class="portfolio-item-mask__wrapper">
+                  <div class="portfolio-item-mask-wrapper__inner"></div>
+                </div> <!-- / .portfolio-item-mask__wrapper -->
+              </div> <!-- / .portfolio-item__mask -->
+            <%# end %>
+          <% end %>
+          </div> <!-- / .portfolio__item -->
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .portfolio__items -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper_classic -->
+
+<!-- FEATURES =========================== -->
+<div class="site-wrapper" id="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%= link_to lang(40), edit_field_path(40), remote: true %> 
+              <span class="text-primary">
+                <%= link_to lang(41), edit_field_path(41), remote: true %> 
+              </span> 
+              <%= link_to lang(42), edit_field_path(42), remote: true %>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%= link_to lang(43), edit_field_path(43), remote: true %>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary">
+                  <%= link_to lang(44), edit_field_path(44), remote: true %>
+                </span> 
+                <%= link_to lang(45), edit_field_path(45), remote: true %>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%= link_to lang(46), edit_field_path(46), remote: true %>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+          <div class="col-sm-6 col-md-5">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary">
+                  <%= link_to lang(47), edit_field_path(47), remote: true %>
+                </span> 
+                <%= link_to lang(48), edit_field_path(48), remote: true %>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%= link_to lang(49), edit_field_path(49), remote: true %>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary">
+                  <%= link_to lang(50), edit_field_path(50), remote: true %>
+                </span> 
+                <%= link_to lang(51), edit_field_path(51), remote: true %>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%= link_to lang(52), edit_field_path(52), remote: true %>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+          <div class="col-sm-6 col-md-5">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary">
+                  <%= link_to lang(53), edit_field_path(53), remote: true %>
+                </span> 
+                <%= link_to lang(54), edit_field_path(54), remote: true %>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%= link_to lang(55), edit_field_path(55), remote: true %>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary">
+                  <%= link_to lang(56), edit_field_path(56), remote: true %>
+                </span> 
+                <%= link_to lang(57), edit_field_path(57), remote: true %>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%= link_to lang(58), edit_field_path(58), remote: true %>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+          <div class="col-sm-6 col-md-5">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary">
+                  <%= link_to lang(59), edit_field_path(59), remote: true %>
+                </span> 
+                <%= link_to lang(60), edit_field_path(60), remote: true %>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%= link_to lang(61), edit_field_path(61), remote: true %>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- PRICING ============================ -->
+<div class="site-wrapper" id="pricing">
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%= link_to lang(62), edit_field_path(62), remote: true %> 
+              <span class="text-primary">
+                <%= link_to lang(63), edit_field_path(63), remote: true %>
+              </span> 
+              <%= link_to lang(64), edit_field_path(64), remote: true %>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%= link_to lang(65), edit_field_path(65), remote: true %>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-4">
+            
+            <!-- Pricing item -->
+            <div class="pricing__item">
+
+              <!-- Pricing title -->
+              <h3 class="pricing-item__title">
+                <%= link_to lang(66), edit_field_path(66), remote: true %>
+              </h3>
+
+              <!-- Price -->
+              <div class="pricing-item__price">
+                <%= link_to lang(67), edit_field_path(67), remote: true %> 
+                  <span class="pricing-item-price__digits">
+                    <%= link_to lang(68), edit_field_path(68), remote: true %>
+                  </span> 
+                  <%= link_to lang(69), edit_field_path(69), remote: true %>
+              </div>
+
+              <!-- Pricing body -->
+              <div class="pricing-item__body">
+                <p class="pricing-item-body__content">
+                  <%= link_to lang(70), edit_field_path(70), remote: true %>
+                </p>
+                <a href="#" class="btn btn-lg btn-default">
+                  <span class="oi oi-cart" title="All" aria-hidden="true"></span>
+                  <span>
+                    <%= link_to lang(71), edit_field_path(71), remote: true %>
+                  </span>
+                </a>
+              </div>
+
+            </div> <!-- / .pricing__item -->
+
+          </div>
+          <div class="col-sm-4">
+            
+            <!-- Pricing item -->
+            <div class="pricing__item">
+
+              <!-- Pricing title -->
+              <h3 class="pricing-item__title">
+                <%= link_to lang(72), edit_field_path(72), remote: true %>
+              </h3>
+
+              <!-- Price -->
+              <div class="pricing-item__price">
+                <%= link_to lang(73), edit_field_path(73), remote: true %> 
+                <span class="pricing-item-price__digits">
+                  <%= link_to lang(74), edit_field_path(74), remote: true %>
+                </span> 
+                <%= link_to lang(75), edit_field_path(75), remote: true %>
+              </div>
+
+              <!-- Pricing body -->
+              <div class="pricing-item__body">
+                <p class="pricing-item-body__content">
+                  <%= link_to lang(76), edit_field_path(76), remote: true %>
+                </p>
+                <a href="#" class="btn btn-lg btn-default">
+                  <span class="oi oi-cart" title="All" aria-hidden="true"></span>
+                  <span>
+                    <%= link_to lang(77), edit_field_path(77), remote: true %>
+                  </span>
+                </a>
+              </div>
+
+            </div> <!-- / .pricing__item -->
+
+          </div>
+          <div class="col-sm-4">
+            
+            <!-- Pricing item -->
+            <div class="pricing__item">
+
+              <!-- Pricing title -->
+              <h3 class="pricing-item__title">
+                <%= link_to lang(78), edit_field_path(78), remote: true %>
+              </h3>
+
+              <!-- Price -->
+              <div class="pricing-item__price">
+                <%= link_to lang(79), edit_field_path(79), remote: true %> 
+                <span class="pricing-item-price__digits">
+                  <%= link_to lang(80), edit_field_path(80), remote: true %>
+                </span> 
+                <%= link_to lang(81), edit_field_path(81), remote: true %>
+              </div>
+
+              <!-- Pricing body -->
+              <div class="pricing-item__body">
+                <p class="pricing-item-body__content">
+                  <%= link_to lang(82), edit_field_path(82), remote: true %>
+                </p>
+                <a href="#" class="btn btn-lg btn-default">
+                  <span class="oi oi-cart" title="All" aria-hidden="true"></span>
+                  <span>
+                    <%= link_to lang(83), edit_field_path(83), remote: true %>
+                  </span>
+                </a>
+              </div>
+
+            </div> <!-- / .pricing__item -->
+
+          </div>
+        </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- TEAM =============================== -->
+<div class="site-wrapper" id="team">
+
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%= link_to lang(84), edit_field_path(84), remote: true %> 
+              <span class="text-primary">
+                <%= link_to lang(85), edit_field_path(85), remote: true %>
+              </span> 
+              <%= link_to lang(86), edit_field_path(86), remote: true %>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%= link_to lang(87), edit_field_path(87), remote: true %>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+
+            <% @tm.times do |n| %>
+              <div class="item">
+                  <div class="row">
+
+                  <% TeamMember.limit(3).offset(n*3).each do |member| %>
+                    <%= render 'team_members/team_member_admin', team_member: member %>
+                  <% end %>
+
+                  <% if n+1 == @tm %>
+                    <%= render 'team_members/new_team_member_admin' %>
+                  <% end %>
+
+                  </div> <!-- / .row -->
+              </div>
+            <% end %>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#" data-target="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="fa fa-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#" data-target="#carousel-example-generic" role="button" data-slide="next">
+            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- CONTACT ============================ -->
+<div class="site-wrapper" id="contact">
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%= link_to lang(88), edit_field_path(88), remote: true %>  
+              <span class="text-primary">
+                <%= link_to lang(89), edit_field_path(89), remote: true %>
+              </span>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%= link_to lang(90), edit_field_path(90), remote: true %>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+
+            <!-- Alert message -->
+            <div class="alert contact-form__alert" id="form_message" role="alert"></div>
+
+            <!-- Setting the custom theme for reCaptcha.
+                 Default themes and customization: 
+                 https://developers.google.com/recaptcha/docs/customization -->
+
+            <script type="text/javascript">
+             var RecaptchaOptions = {
+                theme : 'custom',
+                custom_theme_widget: 'recaptcha_widget'
+             };
+            </script>
+
+            <!-- Contact form -->
+            <!-- Please carefully read the README.txt file
+             in order to setup the PHP contact form properly -->
+            <form role="form" class="contact__form" id="form_sendemail">
+              <div class="row">
+                <div class="col-sm-6">
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label for="email" class="form-control">
+                      <%= link_to lang(91), edit_field_path(91), remote: true %>
+                    </label>
+                    <span class="help-block"></span>
+                  </div>
+                  <!-- Name -->
+                  <div class="form-group">
+                    <label for="name" class="form-control">
+                      <%= link_to lang(92), edit_field_path(92), remote: true %>
+                    </label>
+                    <span class="help-block"></span>
+                  </div>
+
+                  <!-- reCAPTCHA -->
+                  <div class="form-group" id="form-captcha">
+                    <!-- Start reCAPTCHA -->
+                    <div id="recaptcha_widget" style="display:none">
+                      <div class="recaptcha__merge">
+                        <div class="recaptcha-merge__action">
+                          <a href="javascript:Recaptcha.reload()">
+                            <span class="oi oi-loop-square"></span>
+                          </a>
+                          <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">
+                            <span class="oi oi-headphones"></span>
+                          </a>
+                          <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">
+                            <span class="oi oi-image"></span>
+                          </a>
+                        </div> <!-- / .recaptcha-merge__action -->
+                        <!-- reCAPTCHA image -->
+                        <div id="recaptcha_image"></div>
+                      </div> <!-- / .recaptcha__merge -->
+                      <div class="recaptcha_only_if_image text-muted">
+                        Enter the words above (powered by reCaptcha):
+                      </div>
+                      <div class="recaptcha_only_if_audio text-muted">
+                        Enter the numbers you hear (powered by reCaptcha):
+                      </div>
+                      <!-- reCAPTCHA input -->
+                      <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+                    </div> <!-- / #recaptcha_widget -->
+
+                    <script type="text/javascript"
+                      src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">
+                    </script>
+                    <noscript>
+                      <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"
+                          height="300" width="500" frameborder="0"></iframe><br>
+                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                      </textarea>
+                      <input type="hidden" name="recaptcha_response_field"
+                          value="manual_challenge">
+                    </noscript>
+                    <!-- End reCAPTCHA -->
+                    <span class="help-block"></span>
+                  </div> <!-- / .form-group -->
+                  
+                </div>
+
+                <div class="col-sm-6">
+                  <!-- Message -->
+                  <div class="form-group">
+                    <label for="message" class="form-control">
+                      <%= link_to lang(93), edit_field_path(93), remote: true %>
+                    </label>
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+              
+              <div class="text-center">
+                <span class="btn btn-lg btn-default">
+                  <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>
+                  <span>
+                    <%= link_to lang(94), edit_field_path(94), remote: true %>
+                  </span>
+                </span>
+                <div class="clearfix"></div>
+              </div>
+
+            </form>
+          </div>
+        </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- Google Map -->
+<div class="site-wrapper">
+  <div id="map-canvas" class="contact__map"></div>
+</div> <!-- / .site-wrapper -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= link_to lang(95), edit_field_path(95), remote: true %>
+      </div>
+      <div class="col-xs col-sm-6">
+        <div class="social__items">
+          <%= link_to lang(96), class: "social__item" do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+          <%= link_to lang(97), class: "social__item" do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
+          <%= link_to lang(98), class: "social__item" do %>
+            <i class="fa fa-google-plus"></i>
+          <% end %>
+        </div> <!-- / .social__links -->
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,24 @@
+<div class="col-md-4">
+  <div class="thumbnail">
+    <div>
+
+        <%= form_for gl, url: gallery_category_gallery_path(gl.category_id, gl.id), 
+                        index: "edit_#{gl.id}", 
+                        html: { target: "uploader_iframe_#{gl.id}" } do |f| %>
+
+          <%= image_tag gl.image.url, id: "image-#{gl.id}", width: 180 %>
+          <%= link_to sort_path(item: gl.id), remote: true do %>
+           <i class="fa fa-arrow-up"></i>
+          <% end %>
+          <%= link_to gallery_category_gallery_path(gl.category_id, gl.id), method: :delete, remote: true do %>
+            <i class="fa fa-times"></i>
+          <% end %>
+
+          <%= f.file_field :image %>
+          <%= f.text_area :comment %>
+        <% end %>
+       
+      <iframe id="uploader_iframe_<%= gl.id%>" name="uploader_iframe_<%= gl.id%>" style="display: none;"></iframe>
+    </div>
+  </div>
+</div>

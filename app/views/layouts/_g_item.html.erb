@@ -1,0 +1,27 @@
+<div class="col-sm-4 col-md-3 filter__item filter_category_1 filter_category_2 filter_category_3">
+<!-- Portfolio item #<%= gc.id %> -->
+  <div class="portfolio__item">
+  <% if gc.galleries.first %>
+    <%= link_to gc.galleries.first.image.url, data: {lightbox: "gallery_#{gc.id}", 
+                                title: "#{gc.galleries.first.comment}"} do %>
+      <%= image_tag gc.galleries.first.image, class: "img-responsive" %>
+      <!-- Mask -->
+      <div class="portfolio-item__mask">
+        <div class="portfolio-item-mask__wrapper">
+          <div class="portfolio-item-mask-wrapper__inner">
+            <span class="portfolio-item-mask__icon oi oi-camera-slr" title="..." aria-hidden="true"></span>
+            <h4 class="portfolio-item-mask__title animated fadeInUp">
+              <%= I18n.locale == :en ? gc.title : gc.ru_title %>
+            </h4>
+            <p class="portfolio-item-mask__content animated fadeInDown">
+              <%= I18n.locale == :en ? gc.subtitle : gc.ru_subtitle %>
+            </p>
+          </div> <!-- / .portfolio-item-mask-wrapper__inner -->
+        </div> <!-- / .portfolio-item-mask__wrapper -->
+      </div> <!-- / .portfolio-item__mask -->
+    <% end %>
+  <% else %>
+    <%= image_tag "/img/portfolio-screenshot_2.jpg", class: "img-responsive" %>
+  <% end %>
+  </div> <!-- / .portfolio__item -->
+</div>

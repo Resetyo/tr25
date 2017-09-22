@@ -1,0 +1,33 @@
+<div class="col-md-4">
+  <div class="thumbnail">
+    <div class="new-g-item">
+      <% if gc.new_record? %>
+        <%= form_for @gallery_category, 
+                            html: { target: "new_uploader_iframe" } do |f| %>
+          <%= f.hidden_field :title %>
+          <%= f.fields_for :galleries do |gallery_form| %>
+            <%= content_tag :p, "+", class: "new-g-item-ico" %>
+            <%= gallery_form.file_field :image %>
+            <%= gallery_form.text_area :comment %>
+          <% end %>
+        <% end %>
+
+        <iframe id="new_uploader_iframe" name="new_uploader_iframe" 
+              style="display: none;"></iframe>
+
+      <% else %>
+        <%= form_for @gallery, url: gallery_category_galleries_path(gc), 
+                              html: {target: "new_uploader_iframe"} do |f| %>
+          <%= content_tag :p, "+", class: "new-g-item-ico" %>
+          <%= f.file_field :image %>
+          <%= f.text_area :comment %>
+          <%= f.hidden_field :category_id, value: gc.id %>
+        <% end %>
+
+        <iframe id="new_uploader_iframe" name="new_uploader_iframe" 
+                style="display: none;"></iframe>
+                
+      <% end %>
+    </div>
+  </div>
+</div>

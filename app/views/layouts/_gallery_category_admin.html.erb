@@ -1,0 +1,28 @@
+<div class="col-sm-4 col-md-3 filter__item filter_category_1 filter_category_2 filter_category_3">
+<!-- Portfolio item #<%= gc.id %> -->
+  <div class="portfolio__item">
+        
+      <!-- Image -->
+    <% if gc.galleries.first %>
+      <%= image_tag gc.galleries.first.image, class: "img-responsive" %>
+    <% else %>
+      <%= image_tag "/img/portfolio-screenshot_2.jpg", class: "img-responsive" %>
+    <% end %>
+    <%= link_to edit_gallery_category_path(gc), remote: true do %>
+    <!-- Mask -->
+    <div class="portfolio-item__mask">
+      <div class="portfolio-item-mask__wrapper">
+        <div class="portfolio-item-mask-wrapper__inner">
+          <span class="portfolio-item-mask__icon oi oi-camera-slr" title="..." aria-hidden="true"></span>
+          <h4 class="portfolio-item-mask__title animated fadeInUp">
+            <%= gc.title %>
+          </h4>
+          <p class="portfolio-item-mask__content animated fadeInDown">
+            <%= gc.subtitle %>
+          </p>
+        </div> <!-- / .portfolio-item-mask-wrapper__inner -->
+      </div> <!-- / .portfolio-item-mask__wrapper -->
+    </div> <!-- / .portfolio-item__mask -->
+    <% end %>
+  </div> <!-- / .portfolio__item -->
+</div>

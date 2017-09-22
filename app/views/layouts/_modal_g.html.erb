@@ -1,0 +1,39 @@
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Редактирование</h4>
+      </div>
+      <%= form_for gc do |f| %>
+      <div class="modal-body">
+        <%= f.label :ru_title, "Заголовок" %>
+        <%= f.text_area :ru_title, class: "form-control", rows: 1 %>
+        <%= f.label :ru_title, "Подзагаловок" %>
+        <%= f.text_area :ru_subtitle, class: "form-control", rows: 1 %>
+
+        <%= f.label :en_title, "Title" %>
+        <%= f.text_area :title, class: "form-control", rows: 1 %>
+        <%= f.label :en_title, "Subtitle" %>
+        <%= f.text_area :subtitle, class: "form-control", rows: 1 %>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "Удалить", gallery_category_path(gc), class: "btn btn-default", method: :delete unless gc.new_record? %>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+        <%= f.submit "Сохранить", class: "btn btn-default" %>
+      </div>
+      <% end %>
+      <div class="modal-g-body">
+        <div class="row">
+            
+            <% gc.galleries.each do |gl| %>
+              <%= (render 'layouts/modal_g_item', gl: gl) unless gl.new_record? %>
+            <% end %>
+
+            <%= render 'layouts/new_g_item', gc: gc %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

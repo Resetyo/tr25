@@ -1,0 +1,728 @@
+<!-- PRELOADER ============================== -->
+<div class="preloader">
+  <img src="img/preloader.gif" alt="Loading..." class="preloader__img">
+</div>
+
+<!-- NAVBAR ============================== -->
+<div class="navbar navbar-default navbar__initial navbar-fixed-top scrollspy_menu" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#welcome"><%=lang(1)%></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="fullpage__nav nav navbar-nav navbar-right">
+        <li><a href="#welcome"><%=lang(2)%></a></li>
+        <li><a href="#about"><%=lang(3)%></a></li>
+        <li><a href="#portfolio"><%=lang(4)%></a></li>
+        <li><a href="#features"><%=lang(5)%></a></li>
+        <li><a href="#pricing"><%=lang(6)%></a></li>
+        <li><a href="#team"><%=lang(7)%></a></li>
+        <li><a href="#contact"><%=lang(8)%></a></li>
+        <li>
+         <%= link_to change_locale_path do %>
+           <i class="fa fa-globe"></i> en/ru</a>
+         <% end %>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<!-- WELCOME ============================ -->
+<div class="welcome_classic" id="welcome">
+  <div class="welcome-classic__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          
+          <!-- Pre heading -->
+          <p class="heading__pre">
+            <%=lang(9)%>
+          </p>
+
+          <!-- Heading -->
+          <h1 class="heading heading_lg">
+            <%=lang(10)%> <span class="text-primary"><%=lang(11)%></span>
+          </h1>
+
+          <!-- Sub heading -->
+          <p class="heading__sub">
+            <%=lang(12)%>
+          </p>
+
+          <!-- Button -->
+          <div class="text-center">
+
+            <a href="#about" class="btn btn-xl btn-primary">
+              <span class="oi oi-arrow-right" title="Find out more" aria-hidden="true"></span>
+              <span><%=lang(13)%></span>
+            </a>
+          </div>
+          <div class="tip-cloud">
+            <%= link_to admin_path do %>
+              <span>Visit an Admin part</span>
+              <%= image_tag "/img/cloud_PNG27.png", title: "tip" %>
+            <% end %>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </div> <!-- / .classic-welcome__inner -->
+</div> <!-- / .welcome_classic -->
+
+<!-- ABOUT ============================== -->
+<div class="site-wrapper" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+          <div class="lead text-center text">
+            <em>
+              <%=lang(14)%>
+            </em>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</div> <!-- / .site-wrapper_classic -->
+
+<div class="site-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <!-- Heading -->
+        <h1 class="heading">
+          <%=lang(15)%> 
+          <span class="text-primary">
+            <%=lang(16)%>
+          </span> 
+          <%=lang(17)%>
+        </h1>
+
+        <!-- Sub heading -->
+        <p class="heading__sub">
+          <%=lang(18)%>
+        </p>
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #1 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-tablet" title="Fully responsive" aria-hidden="true"></span> <%=lang(19)%>
+          </h3>
+          <p class="about-item__content">
+            <%=lang(20)%>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #2 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-project" title="Built with LESS" aria-hidden="true"></span> <%=lang(21)%>
+          </h3>
+          <p class="about-item__content">
+            <%=lang(22)%>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #3 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-envelope-closed" title="Functional contact form" aria-hidden="true"></span> <%=lang(23)%>
+          </h3>
+          <p class="about-item__content">
+            <%=lang(24)%>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #4 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-menu" title="Two menu types" aria-hidden="true"></span> <%=lang(25)%>
+          </h3>
+          <p class="about-item__content">
+            <%=lang(26)%>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #5 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-layers" title="X layout options" aria-hidden="true"></span> <%=lang(27)%>
+          </h3>
+          <p class="about-item__content">
+            <%=lang(28)%>
+          </p>
+        </div> <!-- / .about__item -->
+
+      </div>
+      <div class="col-sm-4">
+
+        <!-- About item #6 -->
+        <div class="about__item">
+          <h3 class="about-item__title">
+            <span class="about-item-title__icon oi oi-brush" title="5 color schemes" aria-hidden="true"></span> <%=lang(29)%>
+          </h3>
+          <p class="about-item__content">
+            <%=lang(30)%>
+          </p>
+        </div> <!-- / .about__item -->
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper_classic -->
+
+<!-- PORTFOLIO ========================== -->
+<div class="site-wrapper" id="portfolio">
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%=lang(31)%> 
+              <span class="text-primary">
+                <%=lang(32)%>
+              </span> 
+              <%=lang(33)%>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%=lang(34)%>
+            </p>
+
+          </div>
+          <div class="col-xs-12">
+            
+            <!-- Portfolio navigation -->
+            <div class="portfolio__nav">
+              <a href="#" class="btn btn-lg btn-default" data-filter="*">
+                <span class="oi oi-random" title="All" aria-hidden="true"></span>
+                <span><%=lang(35)%></span>
+              </a>
+              <a href="#" class="btn btn-lg btn-default" data-filter=".filter_category_1">
+                <span class="oi oi-random" title="Category 1" aria-hidden="true"></span>
+                <span><%=lang(36)%></span>
+              </a>
+              <a href="#" class="btn btn-lg btn-default" data-filter=".filter_category_2">
+                <span class="oi oi-random" title="Category 2" aria-hidden="true"></span>
+                <span><%=lang(37)%></span>
+              </a>
+              <a href="#" class="btn btn-lg btn-default" data-filter=".filter_category_3">
+                <span class="oi oi-random" title="Category 3" aria-hidden="true"></span>
+                <span><%=lang(38)%></span>
+              </a>
+              <a href="#" class="btn btn-lg btn-default" data-filter=".filter_category_4">
+                <span class="oi oi-random" title="Category 4" aria-hidden="true"></span>
+                <span><%=lang(39)%></span>
+              </a>
+            </div> <!-- / .portfolio__nav -->
+
+          </div>
+        </div> <!-- / .row -->
+
+        <!-- Portfolio items -->
+        <div class="portfolio__items">
+          <div class="row">
+              <% GalleryCategory.all.each do |gc| %>
+                <%= render 'layouts/g_item', gc: gc %>
+              <% end %>
+
+              <% @galleries.each do |category_id, images_by_cat| %>
+                <% images_by_cat.shift %>
+                <% images_by_cat.each do |gallery| %>
+                  <%= link_to "", gallery.image.url, 
+                    data: {lightbox: "gallery_#{category_id}", 
+                    title: "#{gallery.comment}"} %>
+                <% end %>
+              <% end %>
+          </div> <!-- / .row -->
+        </div> <!-- / .portfolio__items -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper_classic -->
+
+<!-- FEATURES =========================== -->
+<div class="site-wrapper" id="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%=lang(40)%> 
+              <span class="text-primary">
+                <%=lang(41)%>
+              </span> 
+              <%=lang(42)%>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%=lang(43)%>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary"><%=lang(44)%></span> 
+                <%=lang(45)%>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%=lang(46)%>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+          <div class="col-sm-6 col-md-5">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary"><%=lang(47)%></span> 
+                <%=lang(48)%>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%=lang(49)%>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary"><%=lang(50)%></span> 
+                <%=lang(51)%>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%=lang(52)%>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+          <div class="col-sm-6 col-md-5">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary"><%=lang(53)%></span> 
+                <%=lang(54)%>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%=lang(55)%>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary"><%=lang(56)%></span> 
+                <%=lang(57)%>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%=lang(58)%>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+          <div class="col-sm-6 col-md-5">
+
+            <!-- Features item -->
+            <div class="features__item">
+
+                <!-- Title -->
+              <h3 class="features-item__title">
+                <span class="text-primary"><%=lang(59)%></span> 
+                <%=lang(60)%>
+              </h3>
+
+              <!-- Summary -->
+              <div class="features-item__summary">
+                <%=lang(61)%>
+              </div>
+            </div> <!-- / .features__item -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- PRICING ============================ -->
+<div class="site-wrapper" id="pricing">
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%=lang(62)%> 
+              <span class="text-primary">
+                <%=lang(63)%>
+              </span> 
+              <%=lang(64)%>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%=lang(65)%>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-4">
+            
+            <!-- Pricing item -->
+            <div class="pricing__item">
+
+              <!-- Pricing title -->
+              <h3 class="pricing-item__title"><%=lang(66)%></h3>
+
+              <!-- Price -->
+              <div class="pricing-item__price">
+                <%=lang(67)%> 
+                <span class="pricing-item-price__digits">
+                  <%=lang(68)%>
+                </span> 
+                <%=lang(69)%>
+              </div>
+
+              <!-- Pricing body -->
+              <div class="pricing-item__body">
+                <p class="pricing-item-body__content">
+                  <%=lang(70)%>
+                </p>
+                <a href="#" class="btn btn-lg btn-default">
+                  <span class="oi oi-cart" title="All" aria-hidden="true"></span>
+                  <span><%=lang(71)%></span>
+                </a>
+              </div>
+
+            </div> <!-- / .pricing__item -->
+
+          </div>
+          <div class="col-sm-4">
+            
+            <!-- Pricing item -->
+            <div class="pricing__item">
+
+              <!-- Pricing title -->
+              <h3 class="pricing-item__title"><%=lang(72)%></h3>
+
+              <!-- Price -->
+              <div class="pricing-item__price">
+                <%=lang(73)%> <span class="pricing-item-price__digits"><%=lang(74)%></span> <%=lang(75)%>
+              </div>
+
+              <!-- Pricing body -->
+              <div class="pricing-item__body">
+                <p class="pricing-item-body__content">
+                  <%=lang(76)%>
+                </p>
+                <a href="#" class="btn btn-lg btn-default">
+                  <span class="oi oi-cart" title="All" aria-hidden="true"></span>
+                  <span><%=lang(77)%></span>
+                </a>
+              </div>
+
+            </div> <!-- / .pricing__item -->
+
+          </div>
+          <div class="col-sm-4">
+            
+            <!-- Pricing item -->
+            <div class="pricing__item">
+
+              <!-- Pricing title -->
+              <h3 class="pricing-item__title"><%=lang(78)%></h3>
+
+              <!-- Price -->
+              <div class="pricing-item__price">
+                <%=lang(79)%> 
+                <span class="pricing-item-price__digits">
+                  <%=lang(80)%>
+                </span> 
+                <%=lang(81)%>
+              </div>
+
+              <!-- Pricing body -->
+              <div class="pricing-item__body">
+                <p class="pricing-item-body__content">
+                  <%=lang(82)%>
+                </p>
+                <a href="#" class="btn btn-lg btn-default">
+                  <span class="oi oi-cart" title="All" aria-hidden="true"></span>
+                  <span><%=lang(83)%></span>
+                </a>
+              </div>
+
+            </div> <!-- / .pricing__item -->
+
+          </div>
+        </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- TEAM =============================== -->
+<div class="site-wrapper" id="team">
+
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%=lang(84)%> 
+              <span class="text-primary"><%=lang(85)%></span> 
+              <%=lang(86)%>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%=lang(87)%>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <% (TeamMember.count/3).ceil.times do |n| %>
+        <div class="item">
+            <div class="row">
+
+            <% TeamMember.limit(3).offset(n*3).each do |member| %>
+              <%= render member %>
+            <% end %>
+
+            </div> <!-- / .row -->
+        </div>
+        <% end %>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#" data-target="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="fa fa-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#" data-target="#carousel-example-generic" role="button" data-slide="next">
+        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- CONTACT ============================ -->
+<div class="site-wrapper" id="contact">
+  <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <!-- Heading -->
+            <h1 class="heading">
+              <%=lang(88)%>  <span class="text-primary"><%=lang(89)%></span>
+            </h1>
+
+            <!-- Sub heading -->
+            <p class="heading__sub">
+              <%=lang(90)%>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+
+            <!-- Alert message -->
+            <div class="alert contact-form__alert" id="form_message" role="alert"></div>
+
+            <!-- Setting the custom theme for reCaptcha.
+                 Default themes and customization: 
+                 https://developers.google.com/recaptcha/docs/customization -->
+
+            <script type="text/javascript">
+             var RecaptchaOptions = {
+                theme : 'custom',
+                custom_theme_widget: 'recaptcha_widget'
+             };
+            </script>
+
+            <!-- Contact form -->
+            <!-- Please carefully read the README.txt file
+             in order to setup the PHP contact form properly -->
+            <form role="form" class="contact__form" id="form_sendemail">
+              <div class="row">
+                <div class="col-sm-6">
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label for="email" class="sr-only"><%=lang(91)%></label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="<%=lang(91)%>">
+                    <span class="help-block"></span>
+                  </div>
+                  <!-- Name -->
+                  <div class="form-group">
+                    <label for="name" class="sr-only"><%=lang(92)%></label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="<%=lang(92)%>">
+                    <span class="help-block"></span>
+                  </div>
+
+                  <!-- reCAPTCHA -->
+                  <div class="form-group" id="form-captcha">
+                    <!-- Start reCAPTCHA -->
+                    <div id="recaptcha_widget" style="display:none">
+                      <div class="recaptcha__merge">
+                        <div class="recaptcha-merge__action">
+                          <a href="javascript:Recaptcha.reload()">
+                            <span class="oi oi-loop-square"></span>
+                          </a>
+                          <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">
+                            <span class="oi oi-headphones"></span>
+                          </a>
+                          <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">
+                            <span class="oi oi-image"></span>
+                          </a>
+                        </div> <!-- / .recaptcha-merge__action -->
+                        <!-- reCAPTCHA image -->
+                        <div id="recaptcha_image"></div>
+                      </div> <!-- / .recaptcha__merge -->
+                      <div class="recaptcha_only_if_image text-muted">
+                        Enter the words above (powered by reCaptcha):
+                      </div>
+                      <div class="recaptcha_only_if_audio text-muted">
+                        Enter the numbers you hear (powered by reCaptcha):
+                      </div>
+                      <!-- reCAPTCHA input -->
+                      <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+                    </div> <!-- / #recaptcha_widget -->
+
+                    <script type="text/javascript"
+                      src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">
+                    </script>
+                    <noscript>
+                      <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"
+                          height="300" width="500" frameborder="0"></iframe><br>
+                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                      </textarea>
+                      <input type="hidden" name="recaptcha_response_field"
+                          value="manual_challenge">
+                    </noscript>
+                    <!-- End reCAPTCHA -->
+                    <span class="help-block"></span>
+                  </div> <!-- / .form-group -->
+                  
+                </div>
+
+                <div class="col-sm-6">
+                  <!-- Message -->
+                  <div class="form-group">
+                    <label for="message" class="sr-only"><%=lang(93)%></label>
+                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="<%=lang(93)%>"></textarea>
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+              
+              <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-default">
+                  <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>
+                  <span><%=lang(94)%></span>
+                </button>
+                <div class="clearfix"></div>
+              </div>
+
+            </form>
+          </div>
+        </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</div> <!-- / .site-wrapper -->
+
+<!-- Google Map -->
+<div class="site-wrapper">
+  <div id="map-canvas" class="contact__map"></div>
+</div> <!-- / .site-wrapper -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%=lang(95)%>
+      </div>
+      <div class="col-xs col-sm-6">
+        <div class="social__items">
+          <a href="<%=lang(96)%>" class="social__item">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="<%=lang(97)%>" class="social__item">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="<%=lang(98)%>" class="social__item">
+            <i class="fa fa-google-plus"></i>
+          </a>
+        </div> <!-- / .social__links -->
+      </div>
+    </div>
+  </div>
+</footer>

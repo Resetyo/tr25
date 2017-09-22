@@ -1,0 +1,83 @@
+/* modal gallery */
+
+.modal-g-body > .row {
+  margin: 0px;
+  & > div[class^="col-"] {
+    padding: 0px;
+  }
+}
+
+form[id^=edit] img, form#new_gallery img {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+input[type=file][id$="_image"] {
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  height: 112px;
+  z-index: 2;
+  width: 182px;
+}
+
+.new-g-item-ico {
+  font-size: 100px;
+  height: 112px;
+  text-align: center;
+  line-height: 112px;
+}
+
+textarea[id^="gallery"] {
+  height: 28px;
+  width: 73%;
+  margin-top: 3px;
+}
+
+#gallery_comment {
+  width: 100%;
+}
+
+form[id^=edit] {
+  a > i {
+    font-size: 20px;
+  }
+}
+
+#new_gallery_category button[type=submit] {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 188px;
+  width: 275px;
+  z-index: 2;
+  div:first-child {
+    font-size: 140px;
+    margin-top: -9px;
+  }
+}
+
+.tip-cloud {
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  z-index: 1000;
+  img {
+    width: 190px;
+  }
+  span {
+    display: inline-block;
+    position: absolute;
+    padding-top: 40px;
+    padding-left: 30px;
+    text-shadow: black 0 0 3px;
+    text-decoration: none;
+    color: white;
+
+  }
+}
