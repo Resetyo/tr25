@@ -6,4 +6,9 @@ class TestController < ApplicationController
       render :nothing => true, :status => 404, :content_type => 'text/html'
     end
   end
+
+  def recourse
+    render :nothing => true, :status => 200, :'Access-Control-Allow-Headers' => 'accept, content-type', :content_type => 'text/html'
+  end
+
 end
