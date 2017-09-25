@@ -17,7 +17,7 @@ class TestController < ApplicationController
       houses << rand 100
     end
     
-    render json: { houses: houses }
+    render json: { houses: houses }, :'Access-Control-Allow-Headers' => 'accept, content-type'
   end
 
 end
