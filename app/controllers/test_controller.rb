@@ -13,12 +13,11 @@ class TestController < ApplicationController
 
   def houses
     houses = []
-    8.times do
-      houses << rand 100
+    8.times do |i|
+      houses << rand(100)
     end
 
-    # render json: { houses: houses }, :'Access-Control-Allow-Headers' => 'accept, content-type'
-    render :nothing => true, :status => 200, :'Access-Control-Allow-Headers' => 'accept, content-type', :content_type => 'text/html'
+    render json: { houses: houses }, :'Access-Control-Allow-Headers' => 'accept, content-type'
   end
 
 end
