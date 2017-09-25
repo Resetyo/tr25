@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   match '/counter', to: 'test#counter', via: 'post'
   match '/recourse', to: 'test#recourse', via: 'post'
+  match '/houses', to: 'test#houses', via: 'post'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
