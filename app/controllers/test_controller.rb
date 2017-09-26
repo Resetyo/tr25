@@ -33,7 +33,7 @@ class TestController < ApplicationController
     news_left = news_count - per_page * page
     news_left = 0 if news_left < 0
 
-    render json: { news: paginated_news, news_left: news_left }
+    render json: { news: paginated_news, news_left: news_left }, :'Access-Control-Allow-Headers' => 'accept, content-type'
   end
 
 end
