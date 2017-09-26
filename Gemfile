@@ -27,7 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 gem 'rack-cors'
+
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
