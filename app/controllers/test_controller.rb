@@ -57,22 +57,21 @@ class TestController < ApplicationController
   end
 
   def district_data
-    data ={
-            "phones": [
-              {
-                "title": "Приемная",
-                "phone": "275-17-51"
-              },
-              {
-                "title": "Вторая приемная",
-                "phone": "275-17-51"
-              }
-            ],
-            "worktime": [
-              "В будни с 18:00 до 7:00",
-              "В выходные и праздничные дни &ndash; круглосуточно."
-            ]
-          }
+    data =  { phones: [
+                {
+                  title: "Приемная",
+                  phone: "275-17-51"
+                },
+                {
+                  title: "Вторая приемная",
+                  phone: "275-17-51"
+                }
+              ],
+              worktime: [
+                "В будни с 18:00 до 7:00",
+                "В выходные и праздничные дни &ndash; круглосуточно."
+              ]
+            }
     render json: data, :'Access-Control-Allow-Headers' => 'accept, content-type'
   end
 
