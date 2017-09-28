@@ -75,4 +75,50 @@ class TestController < ApplicationController
     render json: data, :'Access-Control-Allow-Headers' => 'accept, content-type'
   end
 
+  def contest_data
+    data =  { text: "Желающие принять участие в отборе, должны направить свои предложения для отбора по адресу: г. Красноярск, ул. Алексеева, д.49, кабинет 10-01.",
+              links: [
+                {
+                  title: "Приемная",
+                  path: "path"
+                },
+                {
+                  title: "Вторая приемная",
+                  path: "path"
+                }
+              ],
+              thumbs: [
+                {
+                  title: "Приемная",
+                  links: [
+                    {
+                      title: "Приемная",
+                      path: "path"
+                    },
+                    {
+                      title: "Вторая приемная",
+                      path: "path"
+                    }
+                  ],
+                  download_all: "5fb96c16a319a85330b9f5e23b3d71e2"
+                },
+                {
+                  title: "Вторая приемная",
+                  links: [
+                    {
+                      title: "Приемная",
+                      path: "path"
+                    },
+                    {
+                      title: "Вторая приемная",
+                      path: "path"
+                    }
+                  ],
+                  download_all: "5fb96c16a319a85330b9f5e23b3d71e2"
+                }
+              ]
+            }
+    render json: data, :'Access-Control-Allow-Headers' => 'accept, content-type'
+  end
+
 end

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   match '/additional_news', to: 'test#additional_news', via: 'post'
   match '/more_articles', to: 'test#more_articles', via: 'post'
   match '/district_data', to: 'test#district_data', via: 'post'
+  match '/contest_data', to: 'test#contest_data', via: 'post'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
