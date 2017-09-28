@@ -88,34 +88,36 @@ class TestController < ApplicationController
                 }
               ],
               thumbs: [
-                {
-                  title: "Приемная",
-                  links: [
-                    {
-                      title: "Приемная",
-                      path: "path"
-                    },
-                    {
-                      title: "Вторая приемная",
-                      path: "path"
-                    }
-                  ],
-                  download_all: "5fb96c16a319a85330b9f5e23b3d71e2"
-                },
-                {
-                  title: "Вторая приемная",
-                  links: [
-                    {
-                      title: "Приемная",
-                      path: "path"
-                    },
-                    {
-                      title: "Вторая приемная",
-                      path: "path"
-                    }
-                  ],
-                  download_all: "5fb96c16a319a85330b9f5e23b3d71e2"
-                }
+                "budget" => [
+                  {
+                    title: "Приемная",
+                    links: [
+                      {
+                        title: "Приемная",
+                        path: "path1"
+                      },
+                      {
+                        title: "Вторая приемная",
+                        path: "path2"
+                      }
+                    ],
+                    download_all: "5fb96c16a319a85330b9f5e23b3d71e2"
+                  },
+                  {
+                    title: "Вторая приемная",
+                    links: [
+                      {
+                        title: "Приемная",
+                        path: "path3"
+                      },
+                      {
+                        title: "Вторая приемная",
+                        path: "path4"
+                      }
+                    ],
+                    download_all: "844a7744271c7931e74c7ae27f65fef2"
+                  }
+                ]
               ]
             }
     render json: data, :'Access-Control-Allow-Headers' => 'accept, content-type'

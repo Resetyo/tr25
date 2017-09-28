@@ -21,13 +21,13 @@ Rails.application.routes.draw do
   match '/new_or_update_gallery', to: 'galleries#new_or_update_gallery', via: 'get'
   match '/sort', to: 'galleries#sort', via: 'get'
 
-  match '/counter', to: 'test#counter', via: 'post'
-  match '/recourse', to: 'test#recourse', via: 'post'
-  match '/houses', to: 'test#houses', via: 'post'
-  match '/additional_news', to: 'test#additional_news', via: 'post'
-  match '/more_articles', to: 'test#more_articles', via: 'post'
-  match '/district_data', to: 'test#district_data', via: 'post'
-  match '/contest_data', to: 'test#contest_data', via: 'post'
+  match '/counter', to: 'test#counter', via: ['post', 'get']
+  match '/recourse', to: 'test#recourse', via: ['post', 'get']
+  match '/houses', to: 'test#houses', via: ['post', 'get']
+  match '/additional_news', to: 'test#additional_news', via: ['post', 'get']
+  match '/more_articles', to: 'test#more_articles', via: ['post', 'get']
+  match '/district_data', to: 'test#district_data', via: ['post', 'get']
+  match '/contest_data', to: 'test#contest_data', via: ['post', 'get']
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
